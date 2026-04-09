@@ -11,10 +11,27 @@ const ChevronLeftIcon = (props) => <svg xmlns="http://www.w3.org/2000/svg" width
 const UserPlusIcon = (props) => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" x2="19" y1="8" y2="14"/><line x1="22" x2="16" y1="11" y2="11"/></svg>;
 
 // --- Constants & Config ---
+// const STORAGE_KEY = 'ai_ig_avatar_platform';
+// const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+// const TEXT_API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+// const IMAGE_API_URL = `https://generativelanguage.googleapis.com/v1beta/models/imagen-4.0-generate-001:predict?key=${apiKey}`;
+
+// --- Constants & Config ---
 const STORAGE_KEY = 'ai_ig_avatar_platform';
-const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
-const TEXT_API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
-const IMAGE_API_URL = `https://generativelanguage.googleapis.com/v1beta/models/imagen-4.0-generate-001:predict?key=${apiKey}`;
+const apiKey = import.meta.env.VITE_GEMINI_API_KEY; 
+
+/**
+ * TEXT MODEL: Gemini 2.5 Flash
+ * Used for "Thinking", creating the Avatar's personality, and writing captions.
+ */
+const TEXT_API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
+
+/**
+ * IMAGE MODEL: Imagen 3.0
+ * Used for generating high-quality, aesthetic social media photos.
+ * Note: We use the :predict endpoint for Imagen models.
+ */
+const IMAGE_API_URL = `https://generativelanguage.googleapis.com/v1beta/models/imagen-3.0-generate-002:predict?key=${apiKey}`;
 
 // --- Pre-loaded Default Profiles ---
 const DEFAULT_AVATARS = {
