@@ -31,7 +31,7 @@ const TEXT_API_URL = `https://generativelanguage.googleapis.com/v1beta/models/ge
  * Used for generating high-quality, aesthetic social media photos.
  * Note: We use the :predict endpoint for Imagen models.
  */
-const IMAGE_API_URL = `https://generativelanguage.googleapis.com/v1beta/models/imagen-3.0-generate-002:predict?key=${apiKey}`;
+const IMAGE_API_URL = `https://generativelanguage.googleapis.com/v1beta/models/imagen-4.0-generate-001:predict?key=${apiKey}`;
 
 // --- Pre-loaded Default Profiles ---
 const DEFAULT_AVATARS = {
